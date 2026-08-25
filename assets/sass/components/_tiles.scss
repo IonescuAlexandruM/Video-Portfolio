@@ -13,7 +13,7 @@
 
 		@include vendor('display', 'flex');
 		@include vendor('flex-wrap', 'wrap');
-		postiion: relative;
+		position: relative;
 		margin: ($gutter * -1) 0 0 ($gutter * -1);
 
 		article {
@@ -159,6 +159,12 @@
 			&.style6 {
 				> .image:before {
 					background-color: _palette(accent6);
+				}
+			}
+			
+			&.style7 {
+				> .image:before {
+					background-color: _palette(accent7);
 				}
 			}
 
