@@ -30,9 +30,15 @@
 				<!-- Main -->
 					<div id="main">
 						<article class="thumb">
-							<a href="#" class="image video-link" data-src="https://www.youtube.com/embed/vSKby9MfNSg?si=vEcQUdig0hhSuQYe">
-								<img src="https://img.youtube.com/vi/vSKby9MfNSg/hqdefault.jpg" alt="" />
-							</a>
+							<div class="video">
+								<iframe
+									src="https://www.youtube.com/embed/vSKby9MfNSg?si=vEcQUdig0hhSuQYe"
+									title="YouTube video player"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									allowfullscreen>
+								</iframe>
+							</div>
 
 							<h2>Magna feugiat lorem</h2>
 							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
@@ -143,7 +149,7 @@
 					</footer>
 
 			</div>
-	
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
@@ -152,30 +158,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			<!-- Video popup handler: show YouTube iframe in poptrox-styled popup -->
-			<script>
-				$(function(){
-					$('.video-link').on('click', function(e){
-						e.preventDefault();
-						var src = $(this).data('src');
-						var $overlay = $('<div class="poptrox-overlay"></div>').appendTo('body').hide();
-						var $popup = $('<div class="poptrox-popup"><div class="pic"></div><span class="closer">&amp;#215;</span></div>').appendTo($overlay);
-						var $pic = $popup.find('.pic');
-						var $iframe = $('<iframe>', {
-							src: src,
-							frameborder: 0,
-							allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-							allowfullscreen: true
-						}).css({width: '80%', height: '60vh', border: 0});
-						$pic.append($iframe);
-						$overlay.fadeIn(300);
-						$popup.css({display:'inline-block'});
-						$overlay.on('click', function(){ $overlay.fadeOut(200, function(){ $overlay.remove(); }); });
-						$popup.on('click', function(e){ e.stopPropagation(); });
-						$popup.find('.closer').on('click', function(){ $overlay.fadeOut(200, function(){ $overlay.remove(); }); });
-					});
-				});
-			</script>
-		
 	</body>
 </html>
