@@ -2054,6 +2054,24 @@ input, select, textarea {
 					border: 0;
 				}
 
+				#main .thumb .tiktok-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .thumb .tiktok-video .tiktok-embed {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+	height: 100%;
+}
+
 /* Footer */
 
 	#footer .copyright {
