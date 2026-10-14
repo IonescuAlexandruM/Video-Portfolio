@@ -11,6 +11,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Price table: keep price columns compact and on the right, give Description the room */
+			.price-table th:nth-child(n+3),
+			.price-table td:nth-child(n+3) {
+				text-align: right;
+				white-space: nowrap;
+			}
+			.price-table td:nth-child(n+3) { width: 1%; }
+			.price-table tfoot td { text-align: left !important; white-space: normal !important; }
+
+			@media screen and (max-width: 736px) {
+				/* Table gets wider than the phone screen: swipe sideways to see the prices */
+				.price-table { min-width: 40em; font-size: 0.9em; }
+				.price-table th:nth-child(1),
+				.price-table td:nth-child(1) { width: 8em; }
+				.price-table th:nth-child(2),
+				.price-table td:nth-child(2) { min-width: 17em; }
+				.price-table th, .price-table td { padding-left: 0.5em; padding-right: 0.5em; }
+			}
+			.swipe-hint { display: none; font-size: 0.8em; opacity: 0.7; margin: 0 0 0.5em; }
+			@media screen and (max-width: 736px) { .swipe-hint { display: block; } }
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -54,8 +76,9 @@
 							<!-- Table -->
 								<section>
 									<h2>Price list</h2>
+									<p class="swipe-hint">Swipe the table sideways to see prices &rarr;</p>
 									<div class="table-wrapper">
-										<table>
+										<table class="price-table">
 											<thead>
 												<tr>
 													<th>Service Type</th>
@@ -156,7 +179,7 @@
 											<tfoot>
 												<tr>
 													<td colspan="1"></td>
-													<td>All prices are in EURO, invoice will be calculated using the BNR <br>
+													<td colspan="4">All prices are in EURO, invoice will be calculated using the BNR <br>
 														exchange rate from the invoice day<br>
 													</td>
 												</tr>
