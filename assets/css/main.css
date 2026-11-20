@@ -312,6 +312,77 @@ input, select, textarea {
 		text-align: right;
 	}
 
+
+
+/* Table */
+/* Per hour / Full night switch */
+.price-toggle {
+	display: inline-flex;
+	margin-bottom: 12px;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	overflow: hidden;
+}
+.price-toggle button {
+	padding: 8px 18px;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+.price-toggle button[aria-pressed="true"] {
+	background: currentColor;
+}
+.price-toggle button[aria-pressed="true"] span {
+	filter: invert(1);
+}
+
+/* Lets wide tables scroll sideways on phones */
+.table-scroll {
+	overflow-x: auto;
+	margin-bottom: 24px;
+}
+
+/* Packages table: packages as columns, features as rows */
+.packages-table {
+	min-width: 720px;
+}
+.packages-table thead th {
+	text-align: center;
+	font-size: 1.1em;
+}
+.packages-table tbody th {
+	text-align: left;
+	white-space: nowrap;
+}
+.packages-table tbody td {
+	text-align: center;
+	vertical-align: middle;
+}
+.packages-table .price-row td {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+/* Shared */
+.price-table .price-note {
+	display: block;
+	font-size: 0.85em;
+	font-weight: normal;
+	opacity: 0.7;
+	white-space: normal;
+}
+.price-table .section-row td {
+	font-weight: bold;
+	padding-top: 18px;
+}
+.price-footer {
+	font-size: 0.9em;
+	opacity: 0.8;
+}
+
+
 /* Row */
 
 	.row {
@@ -2394,14 +2465,22 @@ input, select, textarea {
 
 		table td {
 			padding: 0.75em 0.75em;
+			text-align: center;
+				white-space: nowrap;
 		}
+			table td:first-child{
+				text-align: left;
+			} 
 
 		table th {
 			font-size: 0.9em;
 			font-weight: 900;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
+			table th:first-child{
+				text-align: left;
+			} 
 
 		table thead {
 			border-bottom: solid 2px #c9c9c9;
@@ -2436,6 +2515,23 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
+
+		/* Price table: keep price columns compact and on the center, give Description the room */
+			
+			.price-table td:nth-child(n+3) { width: 1%; }
+			.price-table tfoot td { text-align: left !important; white-space: normal !important; }
+
+			@media screen and (max-width: 736px) {
+				/* Table gets wider than the phone screen: swipe sideways to see the prices */
+				.price-table { min-width: 40em; font-size: 0.9em; }
+				.price-table th:nth-child(1),
+				.price-table td:nth-child(1) { width: 8em; }
+				.price-table th:nth-child(2),
+				.price-table td:nth-child(2) { min-width: 17em; }
+				.price-table th, .price-table td { padding-left: 0.5em; padding-right: 0.5em; }
+			}
+			.swipe-hint { display: none; font-size: 0.8em; opacity: 0.7; margin: 0 0 0.5em; }
+			@media screen and (max-width: 736px) { .swipe-hint { display: block; } }
 
 /* Button */
 

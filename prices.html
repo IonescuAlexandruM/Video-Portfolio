@@ -11,28 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Price table: keep price columns compact and on the right, give Description the room */
-			.price-table th:nth-child(n+3),
-			.price-table td:nth-child(n+3) {
-				text-align: right;
-				white-space: nowrap;
-			}
-			.price-table td:nth-child(n+3) { width: 1%; }
-			.price-table tfoot td { text-align: left !important; white-space: normal !important; }
 
-			@media screen and (max-width: 736px) {
-				/* Table gets wider than the phone screen: swipe sideways to see the prices */
-				.price-table { min-width: 40em; font-size: 0.9em; }
-				.price-table th:nth-child(1),
-				.price-table td:nth-child(1) { width: 8em; }
-				.price-table th:nth-child(2),
-				.price-table td:nth-child(2) { min-width: 17em; }
-				.price-table th, .price-table td { padding-left: 0.5em; padding-right: 0.5em; }
-			}
-			.swipe-hint { display: none; font-size: 0.8em; opacity: 0.7; margin: 0 0 0.5em; }
-			@media screen and (max-width: 736px) { .swipe-hint { display: block; } }
-		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -81,112 +60,149 @@
 										<table class="price-table">
 											<thead>
 												<tr>
-													<th>Service Type</th>
-													<th>Description</th>
-													<th>Price /<br> h</th>
-													<th>Price /<br> full night</th>
-													<th>Delivery time</th>
+													<th>Full video for DJs</th>
+													<th>Basic</th>
+													<th>Social</th>
+													<th>Pro</th>
+													<th>Custom</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>Sound recording</td>
-													<td>Full set audio recording from MIXER - High Quality, Medium File Size .wav file</td>
-													<td>5.5</td>
-													<td>24.5</td>
-													<td>Next Day</td>
+													<td>Who is it for</td>
+													<td>DJs who want the <br>full set on video</td>
+													<td>DJs who want content <br>for TikTok</td>
+													<td>DJs who want <br>High-quality footage</td>
+													<td>Special events</td>
+												</tr>
+												
+												<tr id="default">
+													<td>What equipment</td>
+													<td>3 static angles +<br>1 moving</td>
+													<td>3 static angles +<br>1 moving</td>
+													<td>Sony ZVE10/ A7C <br>class + 1 GoPro</td>
+													<td>Your choice, up<br>to 9 angles</td>
 												</tr>
 												<tr>
-													<td>Video recording - Default</td>
-													<td>Full set multicam video recording - Setup depending on room size. <br> 
-														Includes recording with 2 phones + 1 GoPro.<br> 
-														Does not include audio recording
-													</td>
-													<td>20.5</td>
-													<td>104.5</td>
-													<td>2 / 6 Days</td>
+													<td>Quality</td>
+													<td>Normal: <a href="https://youtu.be/dHAMUToCgAI?si=8RuezlRfNPZe2O_X&t=1865">Check full video</a></td>
+													<td>Normal: <a href="https://www.tiktok.com/@alex.ionie/video/7666171855853735190">Check TikTok</a></td>
+													<td>Better</td>
+													<td>Insane</td>
 												</tr>
 												<tr>
-													<td>Video recording - Plus</td>
-													<td>Full set multicam video recording - Setup depending on room size. <br> 
-														Includes recording with 3 phones + 3 GoPro <br>
-														Minimum recordings 3h
-													</td>
-													<td>29.5</td>
-													<td>168.5</td>
-													<td>3 / 6 Days</td>
+													<td>Audio recording</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
 												</tr>
 												<tr>
-													<td>Video recording - Premium</td>
-													<td>Full set multicam video recording - Setup depending on room size. <br> 
-														Includes recording with equipment such as (or similar)<br>
-														Sony ZVE10, Sony ZVE10-II, Sony A7C (depending on availability)<br>
-														 + 1 GoPro 
-													</td>
+													<td>Full set video</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
+												</tr>
+												
+												<tr>
+													<td>Short form edits</td>
 													<td>N/A</td>
-													<td>240.5</td>
-													<td>10 Days</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
+													<td>&#10003;Included</td>
 												</tr>
 												<tr>
-													<td>Video recording - Ultra</td>
-													<td>Full set multicam video recording - Setup depending on room size. <br> 
-														Includes recording with equipment such as (or similar)<br>
-														Sony FX3, Sony A7SIII, Sony A7III, Sony A7IV (depending on availability)<br>
-														 + 1 GoPro 
+													<td>Price</td>
+													<td>150</td>
+													<td>250</td>
+													<td>600</td>
+													<td>Custom price</td>
+												</tr>
+												<tr>
+													<td>Delivery</td>
+													<td>Video 2-6 days</td>
+													<td>Video 2-6 days,<br>Clips 2-6 days</td>
+													<td>Video 2-6 days,<br>Clips 2-6 days</td>
+													<td>Depends on the number<br> of cameras</td>
+												</tr>
+												
+												<tfoot>
+												<tr>
+													<td colspan="4">Prices are per hour of recording and are shown in RON
 													</td>
+												</tr>
+											</tfoot>
+												
+										</table>
+									</div>
+									
+									<h2>Extra services</h2>
+									<p class="swipe-hint">Swipe the table sideways to see prices &rarr;</p>
+									<div class="table-wrapper">
+										<table class="price-table">
+											<thead>
+												<tr>
+													<th>Promo videos</th>
+													<th>Includes</th>
+													<th>Price</th>
+													<th>Delivery</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Promo video Basic</td>
+													<td>Recording day + Editing <br>
+														You give me an example of what you want<br>
+														1 scope + 2 revisions
+													</td>
+													<td>100/recording day + <br>100 edit</td>
+													<td>Recording + 3 Days</td>
+												</tr>
+												<tr>
+													<td>Promo video - Your footage</td>
+													<td>You send me your videos and requirements<br>
+														2 revisions
+													</td>
+													<td>100/scope</td>
+													<td>2 Day</td>
+												</tr>
+											</tbody>
+											<thead>
+												<tr>
+													<th>DJ extras</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>CDJ audio recording</td>
+													<td>.wav or .mp4 file</td>
+													<td>30</td>
+													<td>Next day</td>
+												</tr>
+												<tr>
+													<td>Extra angle</td>
+													<td>GoPro</td>
+													<td>30</td>
 													<td>N/A</td>
-													<td>560.5</td>
-													<td>10 Days</td>
 												</tr>
 												<tr>
-													<td>Video recording - Custom</td>
-													<td>Full set multicam video recording - Setup depending on room size. <br> 
-														Camera setup is custom chosen by the customer <br>
-														Up to 9 angles, any camera, any GoPro, audio included
-													</td>
+													<td>Bring your own cam</td>
+													<td>I add your angle in the edit</td>
+													<td>Free</td>
 													<td>N/A</td>
-													<td>Custom</td>
-													<td>10 Days</td>
-												</tr>
-												<tr>
-													<td>Video recording - Raw</td>
-													<td>Raw, unedited videos <br>
-														Custom setup
-													</td>
-													<td>Custom</td>
-													<td>N/A</td>
-													<td>Next Day</td>
-												</tr>
-												<tr>
-													<td>Editing - Short form<br>My video</td>
-													<td>Short form videos from full set video<br>
-														DJ tracking, crowd, movement
-													</td>
-													<td>14.5</td>
-													<td>74.5</td>
-													<td>14 Days</td>
-												</tr>
-												<tr>
-													<td>Editing - Short form<br>Your video</td>
-													<td>Short form videos from full set video<br>
-														DJ tracking, crowd, movement
-													</td>
-													<td>39.5</td>
-													<td>N/A</td>
-													<td>1 Day</td>
 												</tr>
 											</tbody>
 											<tfoot>
 												<tr>
-													<td colspan="1"></td>
-													<td colspan="4">All prices are in EURO, invoice will be calculated using the BNR <br>
-														exchange rate from the invoice day<br>
+													<td colspan="4">Prices are in RON
 													</td>
 												</tr>
 											</tfoot>
 										</table>
 									</div>
 								<div class="booking-widget" data-api="https://script.google.com/macros/s/AKfycbySTU_CC0iuc6zewHl_bMMOjxmHju9B4yadxyIZZsFBxAlACft_FzdtA2NYnJpyxP48/exec"></div>
+
 
 
 						</div>
